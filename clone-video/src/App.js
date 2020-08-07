@@ -10,34 +10,13 @@ function App() {
       {/* <Header /> */}
       <Header />
 
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
+      <div className="app__page">
+        {/* <SideBar /> */}
+        <Sidebar />
 
-      {/* <SideBar /> */}
-      <Sidebar />
-
-      {/* <RecommendedVideos /> */}
-      <Recommendedvideos />
+        {/* <RecommendedVideos /> */}
+        <Recommendedvideos />
+      </div>
     </div>
   );
 }
