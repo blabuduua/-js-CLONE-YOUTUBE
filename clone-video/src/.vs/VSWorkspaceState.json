@@ -3,7 +3,6 @@
     "",
     "\\Components",
     "\\Components\\Header",
-    "\\Components\\RecommendedVideos",
     "\\Components\\RecommendedVideos\\VideoCard"
   ],
   "SelectedNode": "\\Components\\Header\\Header.js",
