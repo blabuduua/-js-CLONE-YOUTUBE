@@ -4,8 +4,9 @@
     "\\src",
     "\\src\\Components",
     "\\src\\Components\\RecommendedVideos",
-    "\\src\\Components\\RecommendedVideos\\Video"
+    "\\src\\Components\\SearchVideoResults",
+    "\\src\\Components\\SearchVideoResults\\VideoRow"
   ],
-  "SelectedNode": "\\src\\Components\\RecommendedVideos\\Video\\Video.js",
+  "SelectedNode": "\\src\\Components\\SearchVideoResults\\VideoRow\\VideoRow.js",
   "PreviewInSolutionExplorer": false
 }

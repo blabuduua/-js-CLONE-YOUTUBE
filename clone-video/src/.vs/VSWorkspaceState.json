@@ -2,8 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\Components",
-    "\\Components\\Header",
-    "\\Components\\RecommendedVideos\\VideoCard"
+    "\\Components\\Header"
   ],
   "SelectedNode": "\\Components\\Header\\Header.js",
   "PreviewInSolutionExplorer": false

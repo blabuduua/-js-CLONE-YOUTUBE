@@ -1,0 +1,36 @@
+.VideoRow {
+    display: flex;
+    margin-bottom: 30px;
+    max-width: 730px;
+}
+
+.VideoRow__thumbnail {
+    object-fit: contain;
+    width: 250px;
+    height: 140px;
+}
+
+.VideoRow__text {
+    margin-left: 15px;
+}
+
+.VideoRow__description {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #606060;
+}
+
+.VideoRow__headLine {
+    font-size: 12px;
+    color: #606060;
+}
+
+.VideoRow__subscriptionNumber {
+    color: rgb(84, 157, 211);
+    font-weight: bolder;
+}
+
+.VideoRow__subscription {
+    padding: 2px;
+    background-color: lightgray;
+}
