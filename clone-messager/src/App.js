@@ -3,6 +3,10 @@ import './App.css';
 
 import {Button, FormControl, InputLabel, Input} from '@material-ui/core';
 
+import FlipMove from 'react-flip-move';
+
+import firebase from 'firebase';
+
 import Message from './Components/Message/Message';
 import db from './DataBase/firebase'
 
@@ -29,8 +33,10 @@ function App() {
 
   // Для подключения ДБ
   useEffect(() => {
-    db.collection('messages').onSnapshot(snapshot => {
-      setMessages(snapshot.docs.map(doc => doc.data()))
+    db.collection('messages')
+    .orderBy('timestamp', 'desc')
+    .onSnapshot(snapshot => {
+      setMessages(snapshot.docs.map(doc => ({ id: doc.id, message: doc.data() })))
     })
   }, [] )
 
@@ -53,7 +59,8 @@ function App() {
     // Add a new document in collection "cities"
     db.collection("messages").doc().set({
       username: userName,
-      text: input
+      text: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
     .then(function() {
       console.log("Document successfully written!");
@@ -69,7 +76,7 @@ function App() {
     <div className="App">
       <h2>Приветствую, {userName}</h2>
       
-      <form>
+      <form className="App__form">
         <FormControl>
           <InputLabel>Ваше сообщение...</InputLabel>
           <Input value={input} onChange={e => setInput(e.target.value)}/>
@@ -79,13 +86,15 @@ function App() {
             variant="outlined"
             color="primary"
             onClick={sendMessage}
-            type="submit"> 
+            type="submit"> *
             Отправить
           </Button>
         </FormControl>
       </form>
 
-      {messages.map(message => (<Message username={userName} message={message}/>))}
+      <FlipMove>
+        {messages.map(({ id, message }) => (<Message key={id} username={userName} message={message}/>))}
+      </FlipMove>
     </div>
   );
 }
